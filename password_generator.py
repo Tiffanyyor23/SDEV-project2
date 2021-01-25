@@ -1,6 +1,12 @@
+"""
+The purpose of the module is to provide the functions of a
+password generator for the user.
+"""
+
+
 import string
 import secrets
-from verification import check_if_value_is_alpha, check_if_value_is_numeric, check_value_range
+from verification import check_if_value_is_alpha, check_value_range
 
 
 password_generator_options = {
@@ -31,7 +37,7 @@ def main():
     print("You have selected to generate a password.")
     password_length = check_value_range(input("Please enter a value, between and including 8 - 64, for "
                                               "the password length: "))
-    print("Please select the number associated with the selection you would like to choose.")
+    print("Please select the letter associated with the selection you would like to choose.")
     for password_choice, password_option in password_generator_options.items():
         print(f'{password_choice} : {password_option}')
     password_selection = check_if_value_is_alpha(input("Selection: "), 2)

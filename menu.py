@@ -17,11 +17,6 @@ menu_options = {"a": "Generate Password", "b": "Calculate and Format A Percentag
                 "e": "Calculate the Volume of A Right Circular Cylinder",
                 "f": "Exit Program"}
 
-password_generator_options = {
-    "a": "Letters Only",
-    "b": "Numbers Only",
-    "c": "Alphanumeric"}
-
 
 def calculate_percentage(num, demon, point):
     # This function calculates a percentage.
@@ -80,5 +75,3 @@ elif selection == "f":
 else:
     print("The value you entered is not a valid option. Please only enter a "
           "value that corresponds to the options printed on the screen: ")
-
-
