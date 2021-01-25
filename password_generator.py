@@ -19,18 +19,21 @@ def generate_alpha_only(length):
     alphabet = string.ascii_letters
     password = ''.join(secrets.choice(alphabet) for i in range(int(length)))
     print(f'Below is your generated password: \n {password}')
+    print("Good Bye.")
 
 
 def generate_number_only(length):
     alphabet = string.digits
     password = ''.join(secrets.choice(alphabet) for i in range(int(length)))
     print(f'Below is your generated password: \n {password}')
+    print("Good Bye.")
 
 
 def generate_alphanumeric_only(length):
     alphabet = string.ascii_letters + string.digits
     password = ''.join(secrets.choice(alphabet) for i in range(int(length)))
     print(f'Below is your generated password: \n {password}')
+    print("Good Bye.")
 
 
 def main():
@@ -40,7 +43,7 @@ def main():
     print("Please select the letter associated with the selection you would like to choose.")
     for password_choice, password_option in password_generator_options.items():
         print(f'{password_choice} : {password_option}')
-    password_selection = check_if_value_is_alpha(input("Selection: "), 2)
+    password_selection = check_if_value_is_alpha(input("Selection: "), 1)
     print(password_selection)
     if password_selection == "a":
         generate_alpha_only(password_length)

@@ -7,9 +7,10 @@ user input.
 
 def check_if_value_is_alpha(value, length):
     # This function ensures the input is a single character letter.
-    while not value.isalpha():
+    while (len(value) > length and (not value.isalpha())) or (len(value) > length and value.isalpha()) \
+            or (not value.isalpha()):
         # while the value is not alpha and the length of value is not greater than the length provided.
-        value = input("The value you provided is not valid.  Please only enter a"
+        value = input("The value you provided is not valid.  \nPlease only enter a"
                       " single letter corresponding to the provided selection: ")
     return value
 
