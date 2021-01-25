@@ -43,35 +43,36 @@ def calculate_volume_of_right_cylinder(r, h):
     print(f'Based on your input, the volume of a right cylinder is {volume} ')
 
 
-print("Welcome to the Math and Security Program.  \nBelow are the available options. "
-      " \nPlease select the letter associated with the selection you would like to choose.\n \n")
-for choice, option in menu_options.items():
-    print(f'{choice} : {option}')
+if __name__ == "__main__":
+    print("Welcome to the Math and Security Program.  \nBelow are the available options. "
+          " \nPlease select the letter associated with the selection you would like to choose.\n \n")
+    for choice, option in menu_options.items():
+        print(f'{choice} : {option}')
 
-selection = input("\nSelection: ").lower()
-check_if_value_is_alpha(selection, 1)
-if selection == "a":
-    password_generator.main()
-elif selection == "b":
-    numerator = check_if_value_is_numeric(input("Please enter the numerator: "))
-    denominator = check_if_value_is_numeric(input("Please enter the denominator: "))
-    decimal_point = check_if_value_is_numeric(input("Please enter how many decimal places to round to: "))
-    calculate_percentage(numerator, denominator, decimal_point)
-elif selection == "c":
-    days_until_july_4_2025()
-elif selection == "d":
-    a_leg = check_if_value_is_numeric(input("Please enter the value for the leg a: "))
-    b_leg = check_if_value_is_numeric(input("Please enter the value for the leg b: "))
-    C = check_if_value_is_numeric(input("Please enter the value for angle C: "))
-    calculate_leg_of_triangle(a_leg, b_leg, C)
-elif selection == "e":
-    radius = check_if_value_is_numeric(input("Please enter the radius of the cylinder: "))
-    height = check_if_value_is_numeric(input("Please enter the height of the cylinder: "))
-    calculate_volume_of_right_cylinder(radius, height)
-elif selection == "f":
+    selection = input("\nSelection: ").lower()
     check_if_value_is_alpha(selection, 1)
-    print("Thank you for coming. \nExiting Program.")
-    sys.exit()
-else:
-    print("The value you entered is not a valid option. Please only enter a "
-          "value that corresponds to the options printed on the screen: ")
+    if selection == "a":
+        password_generator.main()
+    elif selection == "b":
+        numerator = check_if_value_is_numeric(input("Please enter the numerator: "))
+        denominator = check_if_value_is_numeric(input("Please enter the denominator: "))
+        decimal_point = check_if_value_is_numeric(input("Please enter how many decimal places to round to: "))
+        calculate_percentage(numerator, denominator, decimal_point)
+    elif selection == "c":
+        days_until_july_4_2025()
+    elif selection == "d":
+        a_leg = check_if_value_is_numeric(input("Please enter the value for the leg a: "))
+        b_leg = check_if_value_is_numeric(input("Please enter the value for the leg b: "))
+        C = check_if_value_is_numeric(input("Please enter the value for angle C: "))
+        calculate_leg_of_triangle(a_leg, b_leg, C)
+    elif selection == "e":
+        radius = check_if_value_is_numeric(input("Please enter the radius of the cylinder: "))
+        height = check_if_value_is_numeric(input("Please enter the height of the cylinder: "))
+        calculate_volume_of_right_cylinder(radius, height)
+    elif selection == "f":
+        check_if_value_is_alpha(selection, 1)
+        print("Thank you for coming. \nExiting Program.")
+        sys.exit()
+    else:
+        print("The value you entered is not a valid option. Please only enter a "
+              "value that corresponds to the options printed on the screen: ")
